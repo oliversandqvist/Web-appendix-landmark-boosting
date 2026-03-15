@@ -1,5 +1,5 @@
-#install.packages("HQM")
-library("HQM")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 #install.packages("tidyverse")
 library("tidyverse")
 #install.packages("data.table")
@@ -13,7 +13,7 @@ library("ggplot2")
 #install.packages("SHAPforxgboost")
 library("SHAPforxgboost")
 
-data(pbc2)
+load("pbc2.rda")
 
 ###Summary statistics
 statusVec <- pbc2 %>% 
