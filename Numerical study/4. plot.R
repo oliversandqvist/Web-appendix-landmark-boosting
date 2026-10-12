@@ -65,7 +65,7 @@ data_row2_lines <- all_res %>%
   filter(n == n_max*0.001, Method == "Landmark")
 
 data_row2_hline <- all_res %>%
-  filter(n == n_max, Method == "Naive") %>%
+  filter(n == n_max*0.001, Method == "Naive") %>%
   group_by(Scenario, Model) %>%
   summarise(RMSE = mean(RMSE), MAPE = mean(MAPE), .groups = "drop") 
 
